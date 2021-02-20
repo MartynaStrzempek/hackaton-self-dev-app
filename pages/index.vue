@@ -1,15 +1,23 @@
 <template>
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
-      Hello World
+      <habbits-table />
     </v-col>
   </v-row>
 </template>
 
-<script>
+<script lang="ts">
+import { Vue, Component } from 'nuxt-property-decorator';
+import HabitsTable from '../components/habitsTable.vue';
 
-export default {
+@Component({
   components: {
+    HabitsTable
   }
+})
+class Index extends Vue {
+
 }
+
+export default Index;
 </script>
