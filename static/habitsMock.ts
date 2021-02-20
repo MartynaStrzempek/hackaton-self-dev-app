@@ -19,12 +19,5 @@ export const habitsMock = [
     yesterdayState: 'PARTLY_DONE',
     weekSuccessAmount: 6,
     monthSuccessAmount: 7
-  },
-  {
-    title: 'Talk nice things to bubź',
-    todayState: 'NOT_CHECKED',
-    yesterdayState: 'DONE',
-    weekSuccessAmount: 6,
-    monthSuccessAmount: 27
   }
 ];

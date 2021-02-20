@@ -1,9 +1,5 @@
 <template>
-  <v-row :justify="justifyValue" align="center">
-    <v-col cols="12" sm="8" md="10" class="col--padding-no">
-      <habits-table />
-    </v-col>
-  </v-row>
+  <habits-table />
 </template>
 
 <script lang="ts">

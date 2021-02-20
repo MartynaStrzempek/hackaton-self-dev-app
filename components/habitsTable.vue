@@ -1,6 +1,7 @@
 <template>
-  <v-simple-table>
-    <thead>
+  <v-card elevation="12">
+    <v-simple-table>
+      <thead>
       <tr>
         <th class="pa-1 text-center">
           {{ getYesterdayDate() }}
@@ -27,8 +28,8 @@
           Month
         </th>
       </tr>
-    </thead>
-    <tbody>
+      </thead>
+      <tbody>
       <tr v-for="(habit, idx) in habitsMock" :key="idx">
         <td class="pa-1 text-center">
           <v-icon :color="getStateIconColor(habit.yesterdayState)">
@@ -59,8 +60,9 @@
           {{ habit.monthSuccessAmount }} / {{ getAmountOfDaysInCurrentMonth() }}
         </td>
       </tr>
-    </tbody>
-  </v-simple-table>
+      </tbody>
+    </v-simple-table>
+  </v-card>
 </template>
 
 <script lang="ts">
