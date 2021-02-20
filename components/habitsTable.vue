@@ -11,6 +11,15 @@
         <th class="pa-2">
           Name
         </th>
+        <th v-if="isDesktop" class="pa-1">
+          Sub habit
+        </th>
+        <th v-if="isDesktop" class="pa-1">
+          Reward
+        </th>
+        <th v-if="isDesktop" class="pa-1">
+          Points
+        </th>
         <th class="pa-1 text-center">
           Week
         </th>
@@ -33,6 +42,15 @@
         </td>
         <td class="pa-2">
           {{ habit.title }}
+        </td>
+        <td v-if="isDesktop" class="pa-1">
+          Sub habit name is nice
+        </td>
+        <td v-if="isDesktop" class="pa-1">
+          Cookie
+        </td>
+        <td v-if="isDesktop" class="pa-1">
+          50 / 100
         </td>
         <td class="pa-1 text-center">
           {{ habit.weekSuccessAmount }} / {{ daysInWeek }}
@@ -59,6 +77,10 @@ import { HABIT_STATE, HABIT_STATE_COLORS, HABIT_STATE_ICONS } from '../types/typ
 })
 class HabitsTable extends Vue {
   daysInWeek = 7;
+
+  get isDesktop(): boolean {
+    return this.$mq === 'desktop';
+  };
 
   getStateIconName(currentDayState: HABIT_STATE): HABIT_STATE_ICONS {
     return HABIT_STATE_ICONS[currentDayState];

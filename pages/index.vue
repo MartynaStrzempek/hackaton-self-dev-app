@@ -1,6 +1,6 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6" class="col--padding-no">
+  <v-row :justify="justifyValue" align="center">
+    <v-col cols="12" sm="8" md="10" class="col--padding-no">
       <habits-table />
     </v-col>
   </v-row>
@@ -16,7 +16,9 @@ import HabitsTable from '../components/habitsTable.vue';
   }
 })
 class Index extends Vue {
-
+  get justifyValue(): string {
+    return this.$mq === 'phone' ? 'center' : 'end';
+  }
 }
 
 export default Index;

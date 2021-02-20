@@ -45,6 +45,15 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    [
+      'nuxt-mq',
+      {
+        breakpoints: {
+          phone: 600,
+          desktop: Infinity
+        }
+      }
+    ]
   ],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
